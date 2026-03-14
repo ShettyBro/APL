@@ -1,0 +1,149 @@
+/* ================= RESET ================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+/* ================= CUSTOM FONTS ================= */
+
+/* ================= LARKEN FONT FAMILY ================= */
+
+@font-face {
+  font-family: "Larken";
+  src: url("/fonts/LarkenDEMO-Thin.otf") format("opentype");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "Larken";
+  src: url("/fonts/LarkenDEMO-Light.otf") format("opentype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Larken";
+  src: url("/fonts/LarkenDEMO-Regular.otf") format("opentype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Larken";
+  src: url("/fonts/LarkenDEMO-Medium.otf") format("opentype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Larken";
+  src: url("/fonts/LarkenDEMO-Bold.otf") format("opentype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Larken";
+  src: url("/fonts/LarkenDEMO-ExtraBold.otf") format("opentype");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Larken";
+  src: url("/fonts/LarkenDEMO-Black.otf") format("opentype");
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: "Akony";
+  src: url("/fonts/Akony-Display.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* ================= REUSABLE COMPONENTS ================= */
+
+.card {
+  background: rgba(18, 24, 34, 0.9);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #22c55e, #15803d);
+  color: #022c22;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(34,197,94,0.4);
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes headerFade {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(34, 197, 94, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+  }
+}
+
+/* Utility classes */
+
+.header-enter {
+  animation: headerFade 0.4s ease;
+}
+
+.live-pulse {
+  animation: pulse 1.8s infinite;
+}
