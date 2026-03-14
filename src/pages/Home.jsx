@@ -71,7 +71,7 @@ export default function Home() {
 
 const heroSection = {
   height: "calc(100vh - 72px)",
-  backgroundImage: "url('public\home\bg.webp')",
+  backgroundImage: "url('../home/bg.webp')",
   backgroundSize: "cover",
   backgroundPosition: "center",
   backgroundRepeat: "no-repeat",
